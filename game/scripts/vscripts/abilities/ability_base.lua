@@ -1,0 +1,1 @@
+ability_base = class({});

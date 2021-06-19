@@ -1,0 +1,12 @@
+"HERO_DATA"
+{
+    "npc_dota_hero_sven"
+    {
+        "class"                 "TitanGuardian"
+    }
+
+    "npc_dota_hero_crystal_maiden"
+    {
+        "class"                 "IceSorceress"
+    }
+}

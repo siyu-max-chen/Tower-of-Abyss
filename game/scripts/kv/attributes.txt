@@ -1,0 +1,187 @@
+"ATTRIBUTE"
+{
+    "ENUM"
+    {
+        "ATTACK"                ""
+        "CRIT"                  ""
+        "ATTACK_SPEED"          ""
+        "MOVE_SPEED"            ""
+        "ELEM"                  ""
+        "RES"                   ""
+    }
+
+    "ATTACK"
+    {
+        "set"           "true"
+
+        "PROPS"
+        {
+            "HIT"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "EVADE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "ENHANCE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+        }
+    }
+
+    "CRIT"
+    {
+        "set"           "true"
+
+        "PROPS"
+        {
+            "RATE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "DAMAGE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+        }
+    }
+
+    "ATTACK_SPEED"
+    {
+        "format"        "FLOAT_1"
+        "getter"        "_getUnitAttackSpeed"
+        "setter"        "_setUnitAttackSpeed"
+    }
+
+    "MOVE_SPEED"
+    {
+        "set"           "true"
+        "format"        "FLOAT_1"
+        "getter"        "_getUnitMoveSpeed"
+
+        "PROPS"
+        {
+            "BASE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "_getUnitMoveSpeedBase"
+                "setter"        "_setUnitMoveSpeedBase"
+            }
+
+            "ENHANCE"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "_setUnitMoveSpeedEnhance"
+            }
+
+            "BONUS"
+            {
+                "format"        "FLOAT_1"
+                "getter"        "default"
+                "setter"        "_setUnitMoveSpeedBonus"
+            }
+        }
+    }
+
+    "ELEM"
+    {
+        "set"                   "true"
+
+        "PROPS"
+        {
+            "FIRE"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "ICE"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "THUNDER"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "LIGHT"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "DARKNESS"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+        }
+    }
+
+    "RES"
+    {
+        "set"                   "true"
+
+        "PROPS"
+        {
+            "FIRE"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "ICE"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "THUNDER"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "LIGHT"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+
+            "DARKNESS"
+            {
+                "format"        "INTEGER_1"
+                "getter"        "default"
+                "setter"        "default"
+            }
+        }
+    }
+}

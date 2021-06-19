@@ -1,0 +1,26 @@
+"TOA_GAME"
+{
+    "STATE"
+    {
+        "ENUM"
+        {
+            "NONE"                  ""
+            "IDLE"                  ""
+            "CASTING"               ""
+            "PAUSED"                ""
+            "INVALID"               ""
+        }
+        
+    }
+
+    "EVENT"
+    {
+        "ENUM"
+        {
+            "ON_ATTACK"             ""
+            "ON_ATTACKED"           ""
+            "ON_DAMAGE"             ""
+            "ON_DAMAGED"            ""
+        }
+    }
+}

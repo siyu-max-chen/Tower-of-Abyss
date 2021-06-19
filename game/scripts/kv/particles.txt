@@ -1,0 +1,507 @@
+"TOA_PARTICLES" 
+{
+    "FIRE_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/fire/fire_impact/fire_impact_unstable_concoction_explosion.vpcf"
+    }
+
+    "BuffBuring"
+    {
+        "PATH"          "particles/econ/items/phoenix/phoenix_ti10_immortal/phoenix_ti10_fire_spirit_burn.vpcf"
+    }
+
+    "BuffFreezing"
+    {
+        "PATH"          "particles/units/heroes/hero_drow/drow_hypothermia_counter_stack.vpcf"
+    }
+
+    "BuffOvercharge"
+    {
+        "PATH"          "particles/basic_ambient/generic_buff/overcharge/buff_overcharge_immortal_thunder_strike_buff.vpcf"
+    }
+
+    "ICE_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/ice/ice_impact/ice_impact_ti6_blur_impact.vpcf"
+    }
+
+    "THUNDER_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/thunder/thunder_impact/thunder_impact_lightning_immortal_arc_head.vpcf"
+    }
+
+    "DARKNESS_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/darkness/darkness_impact/darkness_impact_proj_impact.vpcf"
+    }
+
+    "LIGHT_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/light/light_impact/light_impact_proj_impact.vpcf"
+    }
+
+    "CRIT_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/cleave/crit_strike/crit_strike_arcana_omni_slash_tgt_bonus.vpcf"
+        "SOUND.HIT"     "Hero_SkeletonKing.CriticalStrike.TI8"
+    }
+
+    "INNER_FIRES"
+    {
+        "PATHS" 
+        {
+            "0"
+            {
+                "PATH"  "particles/basic_explosion/toa_inner_fire_v0.vpcf"
+                "SOUND.HIT" "Hero_Huskar.Inner_Fire.Cast"
+            }
+
+            "1"
+            {
+                "PATH"  "particles/basic_explosion/toa_inner_fire_v1.vpcf"
+                "SOUND.HIT" "Hero_Huskar.Inner_Fire.Cast"
+            }
+
+            "2"
+            {
+                "PATH"  "particles/basic_explosion/toa_inner_fire_v2.vpcf"
+                "SOUND.HIT" "Hero_Huskar.Inner_Fire.Cast"
+            }
+        }
+    }
+
+    "IGNITE"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/econ/items/wraith_king/wraith_king_ti6_bracer/wraith_king_ti6_hellfireblast.vpcf"
+        "SOUND.CAST"    "Hero_OgreMagi.Fireblast.Cast"
+        "SOUND.HIT"     "Hero_OgreMagi.Fireblast.Cast"
+    }
+
+    "FIRE_CAST"
+    {
+        "PATH"          "particles/units/heroes/hero_ogre_magi/ogre_magi_fireblast.vpcf"
+        "SOUND.HIT"     "Hero_AbyssalUnderlord.Firestorm.Cast"
+    }
+
+    "FROST_CAST"
+    {
+        "PATH"          "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/cm_arcana_pup_flee.vpcf"
+        "SOUND.HIT"     "hero_Crystal.preAttack"
+    }
+
+    "CHAIN_FROST"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/units/heroes/hero_lich/lich_chain_frost.vpcf"
+        "SOUND.CAST"    "Hero_Lich.ChainFrost"
+        "SOUND.HIT"     "Hero_Lich.ChainFrostImpact.Hero"
+    }
+
+    "FROST_BLAST_HIT"
+    {
+        "PATH"          "particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_i_cowlofice.vpcf"
+    }
+
+    "FROST_BLAST"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/units/heroes/hero_winter_wyvern/wyvern_splinter_blast.vpcf"
+        "SOUND.CAST"    "Hero_Winter_Wyvern.SplinterBlast.Projectile"
+        "SOUND.HIT"     "Hero_Winter_Wyvern.SplinterBlast.Target"
+    }
+
+    "FROST_MISSILE"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/units/heroes/hero_winter_wyvern/winter_wyvern_base_attack.vpcf"
+        "SOUND.HIT"     "Hero_Winter_Wyvern.SplinterBlast.Target"
+    }
+
+    "STORM_CAST"
+    {
+        "PATH"          "particles/econ/items/zeus/lightning_weapon_fx/zuus_lightning_bolt_immortal_lightning.vpcf"
+        "SOUND.HIT"     "Hero_StormSpirit.Attack"
+    }
+
+    "STORM_BOLT"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/basic_projectile/thunder/storm_bolt/storm_bolt_proj.vpcf"
+        "SOUND.CAST"    "Hero_Sven.StormBolt"
+        "SOUND.HIT"     "Hero_Sven.StormBoltImpact"
+    }
+
+    "STORM_BOLT_DUST"
+    {
+        "PATH"          "particles/units/heroes/hero_sven/sven_spell_storm_bolt_dust.vpcf"
+    }
+
+    "THUNDER_STRIKE"
+    {
+        "PATH"          "particles/basic_projectile/thunder/lightning_chain/thunder_lightning_immortal_arc_head.vpcf"
+        "SOUND.HIT"     "Hero_Zuus.LightningBolt"
+    }
+
+    "CHAIN_LIGHTNING"
+    {
+        "PATH"          "particles/basic_projectile/toa_lightning_immortal_arc.vpcf"
+    }
+
+    "LIGHTNING_IMPACT"
+    {
+        "PATH"          "particles/basic_projectile/thunder/lightning_chain/thunder_lightning_immortal_arc_head.vpcf"
+        "SOUND.HIT"     "Hero_Zuus.ArcLightning.Target"
+    }
+
+    "THUNDER_STRIKE_GROUND"
+    {
+        "PATH"          "particles/econ/items/zeus/lightning_weapon_fx/zuus_lightning_bolt_immortal_lightning.vpcf"
+    }
+
+    "STORM_PULSE"
+    {
+        "PATH"          "particles/items3_fx/gleipnir_projectile.vpcf"
+        "MISSILE"       "true"
+        "SOUND.CAST"    "Hero_StormSpirit.StaticRemnantExplode"
+        "SOUND.HIT"     "Hero_Leshrac.Lightning_Storm"
+    }
+
+    "STORM_PULSE_IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/thunder/storm_pulse/storm_pulse_impact_damage.vpcf"
+    }
+
+    "THUNDER_CLAPS"
+    {
+        "PATHS" 
+        {
+            "0"
+            {
+                "PATH"  "particles/basic_explosion/thunder/thunderclap/thunder_lightning_stormspirit_overload_discharge.vpcf"
+                "INFO"  "BLUE"
+            }
+
+            "1"
+            {
+                "PATH"  "particles/basic_explosion/thunder/thunderclap/thunder_overload_discharge_azure.vpcf"
+                "INFO"  "AZURE"
+            }
+
+        }
+    }
+
+    "CRIT_SLAM"
+    {
+        "PATH"          "particles/econ/items/chaos_knight/chaos_knight_ti9_weapon/chaos_knight_ti9_weapon_blur_crit.vpcf"
+        "SOUND.HIT"     "Hero_Juggernaut.BladeDance"
+    }
+
+    "CRIT_SLASH_SWEEP"
+    {
+        "PATH"          "particles/basic_ambient/toa_sword_crit_overtheshoulder_golden.vpcf"
+        "SOUND.HIT"     "Hero_Dawnbreaker.Fire_Wreath.Sweep"
+    }
+
+    "CRIT_SLASH_DOWN"
+    {
+        "PATH"          "particles/basic_ambient/toa_sword_crit_golden.vpcf"
+        "SOUND.HIT"     "Hero_Juggernaut.BladeDance"
+    }
+
+    "FROZEN_SPEAR.PROJ"
+    {
+        "PATH"          "particles/basic_projectile/spear/ice_spear/frost_spear.vpcf"
+        "SOUND.CAST"    "Hero_Mars.Spear"
+        "SOUND.HIT"     "Hero_VengefulSpirit.MagicMissileImpact"
+    }
+
+    "FROZEN_SPEAR.IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/ice/frost_blast_impact/ice_impact_crit_tgt.vpcf"
+    }
+
+    "SNOW_EXPLODE"
+    {
+        "PATH"          "particles/econ/events/snowball/snowball_projectile_explosion.vpcf"
+    }
+
+    "FIRE_BREATHE.WAVE"
+    {
+        "PATH"          "particles/basic_projectile/fire/breathe_fire/breathe_fire_wave.vpcf"
+        "SOUND.CAST"    "Hero_DragonKnight.BreathFire"
+    }
+
+    "FIRE_BREATHE.CHAR"
+    {
+        "PATH"          "particles/basic_projectile/fire/breathe_fire/breathe_fire_char_wave.vpcf"
+    }
+
+    "LIGHT_WAVE"
+    {
+        "PATH"              "particles/econ/items/keeper_of_the_light/kotl_ti7_illuminate/kotl_ti7_illuminate.vpcf"
+    }
+
+    "FROST_NOVA_SPARK"
+    {
+        "PATH"          "particles/units/heroes/hero_crystalmaiden/maiden_crystal_nova_flash_c.vpcf"
+    }
+
+    "CURSE_PULSE.IMPACT"
+    {
+        "PATH"          "particles/basic_explosion/darkness/shadowraze_purple/darkness_shadowraze.vpcf"
+    }
+
+    "CURSE_PULSE.PROJ"
+    {
+        "PATH"          "particles/basic_projectile/darkness/curse_pulse/curse_pulse_proj.vpcf"
+        "MISSILE"       "true"
+        "SOUND.CAST"    "Hero_QueenOfPain.Attack"
+        "SOUND.HIT"     "Hero_PhantomAssassin.Dagger.Target"
+    }
+
+    "SCREAMING"
+    {
+        "PATH"          "particles/basic_explosion/toa_scream_of_pain_owner.vpcf"
+        "SOUND.HIT"     "Hero_QueenOfPain.ScreamOfPain"
+    }
+
+    "THROW_DAGGER"
+    {
+        "PATH"          "particles/basic_projectile/toa_stifling_dagger_arcana.vpcf"
+        "MISSILE"       "true"
+        "SOUND.CAST"    "Hero_QueenOfPain.Attack"
+        "SOUND.HIT"     "Hero_PhantomAssassin.Dagger.Target"
+    }
+
+    "TITAN_OVERWHELMING_SMASH_WAVE"
+    {
+        "PATH"      "particles/basic_projectile/toa_titan_shockanvil.vpcf"
+    }
+
+    "TITAN_OVERWHELMING_SMASH_BLINK"
+    {
+        "PATH"      "particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_blink_start_v2.vpcf"
+        "SOUND.HIT"     "Hero_Huskar.Inner_Fire.Cast"
+    }
+
+    "TITAN_OVERWHELMING_SMASH_LOADOUT"
+    {
+        "PATH"      "particles/econ/items/sven/sven_ti10_helmet/sven_ti10_helmet_gods_strength.vpcf"
+    }
+
+    "STOMP_SMASH"
+    {
+        "PATH"      "particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
+        "SOUND.HIT" "Hero_ElderTitan.EchoStomp"
+    }
+
+    "TITAN_GUARDIAN.GREAT_CLEAVE"
+    {
+        "PATH"      "particles/basic_explosion/cleave/white_cleave/titan_guardian_sword_spell_great_cleave_crit.vpcf"
+    }
+    
+    "TITAN_GUARDIAN.OVERWHELMING_SMASH.WARCRY"
+    {
+        "PATH"          "particles/basic_explosion/roar/titan_warcry/titan_spell_warcry_ti_5.vpcf"
+        "SOUND.HIT"     "Hero_Sven.WarCry.Shield"
+    }
+
+    "TITAN_GUARDIAN.OVERWHELMING_SMASH.STOMP1"
+    {
+        "PATH"      "particles/basic_explosion/titan_guardian/overwhelming_stomp/titan_inner_fire.vpcf"
+        "SOUND.HIT"     "Hero_Huskar.Inner_Fire.Cast"
+    }
+
+    "TITAN_GUARDIAN.OVERWHELMING_SMASH.STOMP2"
+    {
+        
+        "PATH"      "particles/items3_fx/blink_overwhelming_burst.vpcf"
+        "SOUND.HIT" "Blink_Layer.Overwhelming"
+    }
+
+    "TITAN_GUARDIAN.AMBIENTS"
+    {
+        "SET"       "true"
+        "PATHS"
+        {
+            "0"
+            {
+                "PATH"      "particles/basic_ambient/titan_guardian/head_ambient/titan_guardian_spell_gods_strength_ambient.vpcf"
+            }
+
+            "1"
+            {
+                "PATH"      "particles/basic_ambient/titan_guardian/weapon/titan_guardian_ftp_sword_ambient.vpcf"
+            }
+        }
+    }
+
+    "TITAN_GUARDIAN.AMBIENTS.ACTIVE"
+    {
+        "SET"       "true"
+        "PATHS"
+        {
+            "0"
+            {
+                "PATH"      "particles/basic_ambient/titan_guardian/weapon/titan_guardian_shattered_greatsword_ambient.vpcf"
+            }
+
+            "1"
+            {
+                "PATH"      "particles/basic_ambient/titan_guardian/aura_ambient/titan_guardian_owner_glow.vpcf"
+            }
+        }
+    }
+
+    "TITAN_GUARDIAN.AMBIENTS.RAGE"
+    {
+        "SET"       "true"
+        "PATHS"
+        {
+            "0"
+            {
+                "PATH"      "particles/basic_ambient/generic_buff/red_rage/buff_rage_doubledamage_owner.vpcf"
+            }
+
+            "1"
+            {
+                "PATH"      "particles/basic_ambient/titan_guardian/weapon/titan_guardian_shattered_greatsword_ambient_rage.vpcf"
+            }
+        }
+    }
+
+    "ICE_SORCERESS.AMBIENTS"
+    {
+        "SET"       "true"
+        "PATHS"
+        {
+            // "0"
+            // {
+            //     "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_pw_staff/crystal_maiden_pw_staff.vpcf"
+            // }
+
+            "1"         // head
+            {
+                "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_dota_plus/crystal_maiden_dota_plus_head.vpcf"
+            }
+
+
+            // "2"         // wepon
+            // {
+            //     "PATH"      "particles/econ/items/crystal_maiden/ti9_immortal_staff/cm_ti9_staff_ambient.vpcf"
+            // }
+
+            // "3"
+            // {
+            //     "PATH"      "particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_ambient.vpcf"
+            // }
+
+            // "2"
+            // {
+            //     "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_dota_plus/crystal_maiden_dota_plus_weapon.vpcf"
+            // }
+        }
+    }
+
+    "ICE_SORCERESS.FREEZING_FIELD.BUFF"
+    {
+        "PATH"      "particles/basic_ambient/ice_sorceress/ice_sorceress_freezing_field_snow_arcana1.vpcf"
+    }
+
+    "ICE_SORCERESS.FREEZING_FIELD.FLASH"
+    {
+        "PATH"      "particles/econ/items/crystal_maiden/ti9_immortal_staff/cm_ti9_staff_lvlup_globe.vpcf"
+    }
+
+    "ICE_SORCERESS.FREEZING_FIELD.BLAST_NOVA"
+    {
+        "PATH"      "particles/units/heroes/hero_lich/lich_ice_age_dmg.vpcf"
+    }
+
+    "BLIZZARD.FIELD"
+    {
+        "PATH"      "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+    }
+
+    "BLIZZARD.EXPLOSION"
+    {
+        "PATH"      "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
+    }
+
+    "ICE_SORCERESS.AMBIENTS.STAFF1"         // pw staff
+    {
+        "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_pw_staff/crystal_maiden_pw_staff.vpcf"
+    }
+
+    "ICE_SORCERESS.AMBIENTS.STAFF2"         // immortal staff
+    {
+        "PATH"      "particles/basic_ambient/ice_sorceress/ice_sorceress_pw_staff.vpcf"
+    }
+
+    "ICE_SORCERESS.AMBIENTS.ARM"            // arm staff
+    {
+        "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_dota_plus/crystal_maiden_dota_plus_arms.vpcf"
+    }
+
+    "ICE_SORCERESS.AMBIENTS.ACTIVE"         // immortal staff
+    {
+        "PATH"      "particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_ambient.vpcf"
+    }
+
+    "ICE_SORCERESS.ICE_NOVA"
+    {
+        "PATH"      "particles/basic_explosion/ice/ice_nova/ice_nova_frostnova.vpcf"
+        "SOUND.HIT"     "Ability.FrostNova"
+    }
+
+    "ICE_SORCERESS.ICE_FROST_WIND"
+    {
+        "PATH"      "particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_g_cowlofice_b.vpcf"
+    }
+
+    // "TITAN_GUARDIAN_RAGE_AMBIENTS"
+    // {
+    //     "SET"       "true"
+    //     "PATHS"
+    //     {
+    //         "0"
+    //         {
+    //             "PATH"      "particles/basic_ambient/toa_titan_rage_shattered_greatsword_ambient.vpcf"
+    //         }
+
+    //         "1"
+    //         {
+    //             "PATH"      "particles/basic_ambient/toa_rage_doubledamage_owner.vpcf"
+    //         }
+    //     }
+    // }
+
+    // "TITAN_GUARDIAN_SHIELD_AMBIENTS"
+    // {
+    //     "SET"       "true"
+    //     "PATHS"
+    //     {
+    //         "0"
+    //         {
+    //             "PATH"      "particles/basic_ambient/toa_titan_rage_head_ambient.vpcf"
+    //         }
+
+    //         "1"
+    //         {
+    //             "PATH"      "particles/basic_ambient/toa_titan_shield_buff.vpcf"
+    //         }
+
+    //         "2"
+    //         {
+    //             "PATH"      "particles/basic_ambient/titan_guardian/titan_guardian_ftp_sword_ambient_test.vpcf"
+    //         }
+
+    //         "3"
+    //         {
+    //             "PATH"      "particles/econ/items/sven/sven_ftp_weapon/sven_spell_gods_strength_ambient_ftp.vpcf"
+    //         }
+    //     }
+    // }
+
+}

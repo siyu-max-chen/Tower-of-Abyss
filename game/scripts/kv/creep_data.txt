@@ -1,0 +1,9 @@
+"CREEP_DATA"
+{
+    "npc_dota_hero_sven"
+    {
+        "CRIT.RATE"                 "25"
+        "CRIT.DAMAGE"               "200"
+        "ELEM.FIRE"                 "5"
+    }
+}

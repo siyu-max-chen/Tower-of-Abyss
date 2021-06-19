@@ -1,0 +1,87 @@
+// Dota2 Editor
+// Get latest version: https://github.com/zombieJ/nw-dota2editor
+
+"DOTAHeroes"
+{
+	"Version"		"1"
+
+	// =================================================================================================================
+	// HERO: Templar Assassin
+	// =================================================================================================================
+	"npc_dota_hero_templar_assassin_template"
+	{
+		// Hero to override
+		"override_hero"	"npc_dota_hero_templar_assassin"
+		// Ability 1
+		"Ability1"	"templar_assassin_refraction_holdout"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"1800"
+		"Ability2"	""
+		"Ability3"	""
+		"Ability4"	""
+		"Ability5"	""
+		"Ability6"	""
+		"Ability7"	""
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+	}
+
+	"hero_titan_guardian"
+	{
+		"Ability1"	"ability_inactive_q"
+		"Ability2"	"ability_inactive_w"
+		"Ability3"	"ability_inactive_e"
+		"Ability4"	"titan_guardian_sot"
+		"Ability5"	"ability_test"
+		"Ability6"	""
+		"Ability7"	""
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	"ability_overwhelming_smash"
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"HasInventory"	"1"
+		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
+		"Model"	"models/heroes/sven/sven.vmdl"
+		"override_hero"	"npc_dota_hero_sven"
+		"Skin"	"0"
+		"VisionDaytimeRange"	"2000"
+		"VisionNighttimeRange"	"2000"
+		"AttackDamageMin"	"64"
+		"AttackDamageMax"	"64"
+	}
+
+	"hero_ice_sorceress"
+	{
+		"Ability1"	"ability_inactive_q"
+		"Ability2"	"ability_inactive_w"
+		"Ability3"	"ability_inactive_e"
+		"Ability4"	"ice_sorceress_moi"
+		"Ability5"	"ability_test"
+		"Ability6"	""
+		"Ability7"	""
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	"ability_freezing_field"
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"Model"	"models/heroes/crystal_maiden/crystal_maiden.vmdl"
+		"override_hero"	"npc_dota_hero_crystal_maiden"
+		"AttributePrimary"	"DOTA_ATTRIBUTE_AGILITY"
+	}
+}

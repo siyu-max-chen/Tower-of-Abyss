@@ -1,0 +1,20 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/ability_panel.css"/>
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/UI/panel_test_ability.js" />
+    </scripts>
+
+        <Panel class="AbilityBoardPanel1">
+            <Panel class="panel_ability_panel_title">
+                <Label class="ability_panel_title" text="Test Ability Panel 测试技能面板"></Label>
+            </Panel>
+
+            <Button class="button_ability_panel_cancel" onactivate="closeTestAbilityPanel()"></Button>
+            
+            <Panel class="AbilityBoardPanel2" id="id_test_ability_board_panel">
+            </Panel>
+        </Panel>
+</root>

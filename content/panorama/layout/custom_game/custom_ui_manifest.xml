@@ -1,0 +1,13 @@
+<root>
+    <styles>
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/UI/init.js" />     <!-- 具体响应的函数和操作 -->
+        <include src="file://{resources}/scripts/custom_game/events/test_ability.js" />     <!-- 具体响应的函数和操作 -->
+    </scripts>
+
+    <Panel>
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/panel_test_ability.xml" />
+    </Panel>
+</root>

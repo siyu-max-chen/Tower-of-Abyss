@@ -1,0 +1,58 @@
+"BOOSTERS"
+{
+    "ENUM"
+    {
+        "HUNTER"            ""
+        "BARBARIAN"         ""
+        "SCHOLAR"           ""
+        "SCOUT"             ""
+    }
+
+    "HUNTER"          
+    {
+        "callback"      "_updateHunter"
+        "maxLevel"      "4"
+        "values"
+        {
+            "1"             ""
+            "2"             ""
+            "3"             ""
+        }
+    }
+
+    "BARBARIAN"
+    {
+        "callback"      "_updateHunter"
+        "maxLevel"      "4"
+        "values"
+        {
+            "1"             ""
+            "2"             ""
+            "3"             ""
+        }
+    }
+
+    "SCHOLAR"
+    {
+        "callback"      "_updateHunter"
+        "maxLevel"      "4"
+        "values"
+        {
+            "1"             ""
+            "2"             ""
+            "3"             ""
+        }
+    }
+
+    "SCOUT"
+    {
+        "callback"      "_updateScout"
+        "maxLevel"      "4"
+        "values"
+        {
+            "1"             "15"
+            "2"             "10"
+            "3"             "12"
+        }
+    }
+}

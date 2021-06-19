@@ -1,0 +1,260 @@
+// Dota2 Editor
+// Get latest version: https://github.com/zombieJ/nw-dota2editor
+
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	// =================================================================================================================
+	// Templar Assassin: Refraction Holdout
+	// =================================================================================================================
+	"templar_assassin_refraction_holdout"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	"0.0 0.0 0.0 0.0"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"17.0 17.0 17.0 17.0"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"100"
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_absorb"	"200 300 400 500"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"20 40 60 80"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"17.0 17.0 17.0 17.0"
+			}
+		}
+	}
+
+	"ability_frost_blast"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"lich_chain_frost"
+		"ScriptFile"	"abilities/ability_frost_blast"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"8"
+	}
+
+	"ability_ignite"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"ogre_magi_ignite"
+		"ScriptFile"	"abilities/ability_ignite"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"8"
+	}
+
+	"ability_chain_lightning"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"zuus_arc_lightning"
+		"ScriptFile"	"abilities/ability_chain_lightning"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_NO"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+		"precache"
+		{
+			"particle"	"particles/econ/items/sven/sven_ti9/sven_ti9_head_ambient_lvl1.vpcf"
+			"particle"	"particles/basic_ambient/titan_guardian_head_ambient.vpcf"
+			"particle"	"particles/basic_ambient/titan_guardian_shattered_greatsword_ambient.vpcf"
+			"particle"	"particles/basic_ambient/titan_guardian_buff_runes.vpcf"
+			"particle"	"particles/basic_ambient/titan_guardian_buff_main.vpcf"
+			"particle"	"particles/units/heroes/hero_mars/mars_debut_ground_impact.vpcf"
+			"particle"	"particles/units/heroes/hero_mars/mars_debut_wind_instant.vpcf"
+		}
+	}
+
+	"ability_fist_of_storm"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"zuus_lightning_bolt"
+		"ScriptFile"	"abilities/ability_fist_of_storm"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_NO"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+	}
+
+	"ability_curse_pulse"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"witch_doctor_voodoo_switcheroo"
+		"ScriptFile"	"abilities/ability_curse_pulse"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_NO"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+	}
+
+	"ability_stomp_of_pyro_wrath"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"huskar_inner_fire"
+		"ScriptFile"	"abilities/ability_stomp_of_pyro_wrath"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
+		"AbilityCooldown"	"5"
+	}
+
+	"ability_flaming_slash"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"phoenix_icarus_dive"
+		"ScriptFile"	"abilities/ability_flaming_slash"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
+	}
+
+	"ability_spear_of_frozen_wind"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"crystal_maiden_brilliance_aura"
+		"ScriptFile"	"abilities/ability_spear_of_frozen_wind"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
+	}
+
+	"ability_effect_dummy"
+	{
+		"BaseClass"	"ability_lua"
+		"ScriptFile"	"effects/ability_effect_dummy"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+	}
+
+	"ability_overwhelming_smash"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"sven/sven_ti10_immortal_ability_icon/sven_ti10_immortal_gods_strength"
+		"ScriptFile"	"abilities/ability_overwhelming_smash"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+	}
+
+	"titan_guardian_sot"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"sven/cyclopean_marauder_ability_icons/sven_warcry"
+		"ScriptFile"	"creeps/heroes/titan_guardian_sot.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ice_sorceress_moi"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"crystal_maiden_let_it_go"
+		"ScriptFile"	"creeps/heroes/ice_sorceress_moi.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ability_test"
+	{
+		"BaseClass"	"ability_lua"
+		"ScriptFile"	"abilities/ability_test"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	}
+
+	"ability_inactive_q"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"action_stop"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ability_inactive_w"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"action_stop"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ability_inactive_e"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"action_stop"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"ability_blizzard"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"crystal_maiden_freezing_field"
+		"ScriptFile"	"abilities/ability_blizzard"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityType"	"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+		"AOERadius"	"450"
+	}
+
+	"ability_freezing_field"
+	{
+		"BaseClass"	"ability_lua"
+		"AbilityTextureName"	"crystal_maiden_freezing_field_alt1"
+		"ScriptFile"	"abilities/ability_freezing_field"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastPoint"	"0.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"5"
+	}
+}

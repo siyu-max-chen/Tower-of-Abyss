@@ -1,0 +1,50 @@
+"MODIFIER"
+{
+    "BUFF"
+    {
+
+    }
+
+    "DEBUFF"
+    {
+        "burning"
+        {
+            "isBuff"                    "true"
+            "debuff"                    "true"
+            "name"                      "burning"
+            "type"                      "1"
+            "defaultDuration"           "10"
+            "modifierName"              "modifier_buff_burning"
+            "modifierPath"              "modifiers/generic_debuff.lua"
+        }
+
+        "freezing"
+        {
+            "isBuff"                    "true"
+            "debuff"                    "true"
+            "name"                      "burning"
+            "type"                      "3"
+            "defaultDuration"           "10"
+            "modifierName"              "modifier_buff_freezing"
+            "modifierPath"              "modifiers/generic_debuff.lua"
+
+            "property"
+            {
+                "stack"                         "5"
+                "attackSpeedDec"                "10"
+                "moveSpeedDec"                  "8"             
+            }
+        }
+
+        "overcharge"
+        {
+            "isBuff"                    "true"
+            "debuff"                    "true"
+            "name"                      "overcharge"
+            "type"                      "1"
+            "defaultDuration"           "10"
+            "modifierName"              "modifier_buff_overcharge"
+            "modifierPath"              "modifiers/generic_debuff.lua"
+        }
+    }
+}

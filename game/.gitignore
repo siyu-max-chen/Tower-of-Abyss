@@ -1,0 +1,14 @@
+maps
+.dota2editor/
+
+materials
+models
+particles
+resource
+panorama
+
+config.*
+debug.*
+
+*.bin
+*.cfg

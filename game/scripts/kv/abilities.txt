@@ -1,0 +1,57 @@
+"ABILITY"
+{
+    "ability_chain_lightning"
+    {
+        "text"              "闪电链"
+        "type"              "Q"
+    }
+
+    "ability_curse_pulse"
+    {
+        "text"              "诅咒炮"
+        "type"              "Q"
+    }
+
+    "ability_fist_of_storm"
+    {
+        "text"              "风暴重击"
+        "type"              "Q"
+    }
+
+    "ability_flaming_slash"
+    {
+        "text"              "吹焰斩"
+        "type"              "Q"
+    }
+
+    "ability_frost_blast"
+    {
+        "text"              "连环霜爆"
+        "type"              "Q"
+    }
+
+    "ability_ignite"
+    {
+        "text"              "点燃术"
+        "type"              "Q"
+    }
+
+    "ability_spear_of_frozen_wind"
+    {
+        "text"              "寒风之枪"
+        "type"              "Q"
+    }
+
+    "ability_blizzard"
+    {
+        "text"              "暴风雪"
+        "type"              "W"
+    }
+
+    "ability_stomp_of_pyro_wrath"
+    {
+        "text"              "焦焰怒击"
+        "type"              "W"
+    }
+
+}

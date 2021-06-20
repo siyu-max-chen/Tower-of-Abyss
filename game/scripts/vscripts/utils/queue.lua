@@ -8,8 +8,8 @@ function TreeNode:new(data, left, right, parent)
         parent = parent or nil,
     };
 
-    setmetatable(obj, self)
-    self.__index = self
+    setmetatable(obj, self);
+    self.__index = self;
     return obj;
 end
 

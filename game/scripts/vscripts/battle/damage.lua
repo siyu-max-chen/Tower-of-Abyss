@@ -1,11 +1,16 @@
 Battle._attackRecordMap = {};
 
-function Battle:registerAttackEvent(unit)
+function Battle:registerAttackEvent(entity)
     print('reggggggggggsiter');
-    print(Utility:formatUnitLog(unit));
+    if not entity or not entity._instance then
+        return;
+    end
 
-    if not unit:HasModifier('modifier_normal_attack') then
-        unit:AddNewModifier(nil, ABILITY_EFFECT_DUMMY, 'modifier_normal_attack', {});
+    local instance = entity._instance;
+    print(Utility:formatUnitLog(instance));
+
+    if not instance:HasModifier('modifier_normal_attack') then
+        instance:AddNewModifier(nil, ABILITY_EFFECT_DUMMY, 'modifier_normal_attack', {});
     end
 end
 

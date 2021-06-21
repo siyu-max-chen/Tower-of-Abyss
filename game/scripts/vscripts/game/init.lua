@@ -19,7 +19,7 @@ require('effects/range');
 
 require('abilities/main');
 
-require('creeps/main');
+require('creeps/creep');
 
 function initAbilityDummy()
     if (isAbilityDummyInit) then
@@ -49,7 +49,7 @@ function _initialize()
     Modifier:_initialize();
 
     _G.Ability = Ability;               Ability:_initialize();
-    _G.Creep = Creep;                   Creep:_initialize();
+    _G.Creep = Creep;                   -- Creep:_initialize();
     _G.Hero = Hero;                     Hero:_initialize();
 
     _G.isDebugEnabled = isDebugEnabled;

@@ -22,11 +22,11 @@ end
 function ToAGame:OnNPCSpawned(event)
     local unit = EntIndexToHScript(event.entindex);
 
-    if _isValidUnit(unit) and not unit._ToACreepInit then
+    if _isValidUnit(unit) and not unit._isInit then
         ToAGame:initUnitWithAbility(unit);
-        Creep:init(unit);
+        local creep = Creep:new(nil, nil, nil, nil, unit);
 
-        unit._ToACreepInit = true;
+        unit._isInit = true;
     end
 end
 
@@ -40,6 +40,8 @@ local _handleTestAbilitySelectEvent = function(id, data)
     local abilityId = data.abilityId;
     local pos = data.pos;
     local unit = getTestUnit();
+
+    print('Triggerred Unit is ... ' .. tostring(unit));
 
     Ability:addAbilityToHero(abilityId, unit);
 

@@ -1,14 +1,20 @@
 local CREEP = 'CREEP';
-local NEW = 'NEW';
-local ERROR = 'ERROR';
-local LOAD_DATA = 'LOAD_DATA';
-local CHANGE = 'CHANGE';
-local INIT = 'INIT';
+local logEvents = {
+    EVENTS = 'EVENTS', ERROR = 'ERROR', LOAD_DATA = 'LOAD_DATA',
+    INIT = 'INIT',
+};
 
 Creep = class({});
 
 require('creeps/heroes/main');
 
+--- constructor of new Creep
+---@param type string - unit type, ususally is the name
+---@param playerId number - player id
+---@param originVec Vector - creation position
+---@param initializer function - optional
+---@param skipCreationInstance unit - if provide this, will not create a new instance
+---@return table
 function Creep:new(type, playerId, originVec, initializer, skipCreationInstance)    
     local obj = {};
     setmetatable(obj, self);
@@ -25,14 +31,14 @@ function Creep:new(type, playerId, originVec, initializer, skipCreationInstance)
     -- init creep events and load other initializer
     self:init(obj, initializer);
 
-    if isDebugEnabled(CREEP, NEW) then
-        debugLog(CREEP, NEW, 'Create a new creep (unit instance): ' .. Utility:formatUnitLog(obj._instance));
+    if isDebugEnabled(CREEP, logEvents.EVENTS) then
+        debugLog(CREEP, logEvents.EVENTS, '{ Creating new creep instance }: ' .. Utility:formatUnitLog(obj._instance));
     end
 
     return obj;
 end
 
-local _initHero = function(instance)
+function Creep:_initHero(instance)
     if not instance:IsRealHero() then
         return;
     end
@@ -43,16 +49,15 @@ local _initHero = function(instance)
     if hero and hero._initialize then
         hero:_initialize(instance);
     end
-
-    if isDebugEnabled(CREEP, INIT) then
-        debugLog(CREEP, INIT, 'Hero init: ' .. Utility:formatUnitLog(instance));
-    end
 end
 
+--- handler that will be used to initilize creep (attr modify, event register...)
+---@param entity creep
+---@param initializer function
 function Creep:init(entity, initializer)
     if not entity or not entity._instance or entity._isInit or not entity._instance:GetUnitName() then
-        if isDebugEnabled(CREEP, ERROR) then
-            debugLog(CREEP, INIT, 'Error: failed to initialize the creep entity: ' .. tostring(entity));
+        if isDebugEnabled(CREEP, logEvents.ERROR) then
+            debugLog(CREEP, logEvents.ERROR, 'Error: failed to initialize the creep entity: ' .. tostring(entity));
         end
 
         return;
@@ -66,7 +71,7 @@ function Creep:init(entity, initializer)
 
     Battle:registerAttackEvent(entity);
 
-    _initHero(instance);
+    Creep:_initHero(instance);
 
     -- modify instance's attribute based on the preloaded data
     local creepData = Data:getData('CREEPDATA');
@@ -79,7 +84,7 @@ function Creep:init(entity, initializer)
         end
     end
 
-    if isDebugEnabled(CREEP, INIT) then
-        debugLog(CREEP, INIT, 'Creep init: ' .. Utility:formatUnitLog(instance));
+    if isDebugEnabled(CREEP, logEvents.INIT) then
+        debugLog(CREEP, logEvents.INIT, '{ Creep init }: ' .. Utility:formatUnitLog(instance));
     end
 end

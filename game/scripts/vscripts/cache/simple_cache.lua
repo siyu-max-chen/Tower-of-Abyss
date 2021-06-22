@@ -3,12 +3,11 @@ if _G.Cache == nil then
 end
 
 local CACHE = 'CACHE';
-local REFRESH_DATA = 'REFRESH_DATA';
-local REFRESH = 'REFRESH';
-local SET = 'SET';
-local REMOVE = 'REMOVE';
-local GET = 'GET';
-local ERROR = 'ERROR';
+
+local logEvents = {
+    SET = 'SET', REMOVE = 'REMOVE', CACHEDATA = 'CACHEDATA',
+    TIMER = 'TIMER', ERROR = 'ERROR',
+};
 
 LinkLuaModifier('modifier_simple_cache', 'cache/simple_cache.lua', LUA_MODIFIER_MOTION_NONE);
 
@@ -42,13 +41,14 @@ function Cache:_getExpirationTime (ttl)
 end
 
 function Cache:_registerEntry(entry)
+    -- if existed, return the one
     if Cache._cache[entry] ~= nil then
         return;
     end
 
     local entryTable = {
         size = 0,
-        mark = 0,
+        mark = 0,                  -- will be used for create ids
         keyMap = {},               -- ids [cacheId, cacheKey]  ['ability_blizzard_1', ]
         dataMap = {},              -- [index, obj]  [0, { ttl, eg..., data } ]
     };
@@ -78,8 +78,8 @@ end
 function Cache:_registerExpireEvent(entry, cacheId, expireAt)
     if (expireAt <= Cache:_getCurrentTime()) then
 
-        if isDebugEnabled(CACHE, ERROR) then
-            debugLog(CACHE, ERROR,  'Failed to register Cache-Expire event, cache id is: ' .. tostring(cacheId) .. ' , expected expiration is: ' .. tostring(expireAt));
+        if isDebugEnabled(CACHE, logEvents.ERROR) then
+            debugLog(CACHE, logEvents.ERROR,  'Failed to register Cache-Expire event, cache id is: ' .. tostring(cacheId) .. ' , expected expiration is: ' .. tostring(expireAt));
         end
 
         return;
@@ -127,8 +127,8 @@ function Cache:set(entry, obj, type, ttl)
 
     Cache:_registerExpireEvent(entry, cacheId, expireAt);
 
-    if isDebugEnabled(CACHE, SET) then
-        debugLog(CACHE, SET, (Utility:formatObjLog(obj) .. ' is registered: ' .. ' entry: ' .. tostring(entry) .. ', cache id: ' .. tostring(cacheId) .. ' expiration: ' .. tostring(expireAt)));
+    if isDebugEnabled(CACHE, logEvents.SET) then
+        debugLog(CACHE, logEvents.SET, (Utility:formatObjLog(obj) .. ' is registered: ' .. ' entry: ' .. tostring(entry) .. ', cache id: ' .. tostring(cacheId) .. ' expiration: ' .. tostring(expireAt)));
     end
 
     return cacheId;
@@ -201,8 +201,8 @@ function Cache:remove(entry, cacheId)
     entryTable.dataMap[lastKey] = nil;
     data.obj = nil;
 
-    if isDebugEnabled(CACHE, REMOVE) then
-        debugLog(CACHE, REMOVE, ('Remove cache Succeefully: ' .. ' cache id: ' .. tostring(cacheId) .. ' obj is: ' .. Utility:formatObjLog(cachedObj)));
+    if isDebugEnabled(CACHE, logEvents.REMOVE) then
+        debugLog(CACHE, logEvents.REMOVE, ('Remove cache Succeefully: ' .. ' cache id: ' .. tostring(cacheId) .. ' obj is: ' .. Utility:formatObjLog(cachedObj)));
     end
 
     return cachedObj;
@@ -214,8 +214,8 @@ function modifier_simple_cache:OnCreated(params)
     Cache._cacheSysTime = 0;
     self._dataObj = {};
 
-    if isDebugEnabled(CACHE, REFRESH) then
-        debugLog(CACHE, REFRESH, ('Cache Refresh is starting the task **********'));
+    if isDebugEnabled(CACHE, logEvents.TIMER) then
+        debugLog(CACHE, logEvents.TIMER, ('Cache Refresh is starting the task **********'));
     end
 
     self:SetDuration(1000000, true);
@@ -227,8 +227,8 @@ function modifier_simple_cache:OnIntervalThink()
     local expireTable = Cache._expireTable;
     local currentTime = Cache:_getCurrentTime();
 
-    if isDebugEnabled(CACHE, REFRESH) then
-        debugLog(CACHE, REFRESH, ('Cache System time ********** ' .. tostring(Cache._cacheSysTime)));
+    if isDebugEnabled(CACHE, logEvents.TIMER) then
+        debugLog(CACHE, logEvents.TIMER, ('Cache System time ********** ' .. tostring(Cache._cacheSysTime)));
     end
 
     if expireTable and expireTable[currentTime] and #expireTable[currentTime] then
@@ -245,8 +245,8 @@ function modifier_simple_cache:OnIntervalThink()
         expireTable[currentTime] = nil;
     end
 
-    if isDebugEnabled(CACHE, REFRESH_DATA) then
-        debugLog(CACHE, REFRESH_DATA, ('Current Cached data: '));
+    if isDebugEnabled(CACHE, logEvents.CACHEDATA) then
+        debugLog(CACHE, logEvents.CACHEDATA, ('Current Cached data: '));
         Utility:printObj(Cache._cache, 'Current Cache Table');
     end
 

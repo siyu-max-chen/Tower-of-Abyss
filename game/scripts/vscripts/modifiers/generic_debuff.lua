@@ -91,7 +91,7 @@ function modifier_buff_freezing:OnCreated(params)
 
     if IsServer() then
         local stackMax = tonumber(Modifier.Debuff.freezing.property.stack);
-        
+
         if not unit._buffFreezingData or not #unit._buffFreezingData then
             unit._buffFreezingData = {
                 timeFrame = 0,

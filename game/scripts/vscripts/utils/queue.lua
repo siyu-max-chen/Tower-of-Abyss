@@ -1,3 +1,10 @@
+local HELPER = 'HELPER';
+
+local logEvents = {
+    EVENTS = 'EVENTS',
+    CREATE = 'CREATE', ADD = 'ADD', POLL = 'POLL',
+};
+
 TreeNode = class({});
 
 function TreeNode:new(data, left, right, parent)
@@ -80,6 +87,11 @@ function PriorityQueue:new(capacity, compareFunc)
 
     setmetatable(obj, self);
     self.__index = self;
+
+    if isDebugEnabled(HELPER, logEvents.CREATE) then
+        debugLog(HELPER, logEvents.CREATE, '{ New Priority Queue }: ' .. tostring(obj) .. ' , Capacity is: ' .. tostring(capacity));
+    end
+
     return obj;
 end
 
@@ -116,6 +128,10 @@ function PriorityQueue:poll()
     if self.size == 0 then
         self.root = nil;
 
+        if isDebugEnabled(HELPER, logEvents.POLL) then
+            debugLog(HELPER, logEvents.POLL, '{ Priority Queue }: ' .. tostring(self) .. ' , Polled data is: ' .. tostring(result));
+        end
+
         return result;
     end
 
@@ -125,6 +141,10 @@ function PriorityQueue:poll()
         treeNode.parent.left = treeNode.right;
         treeNode.right.parent = treeNode.parent;
         treeNode:clearNode();
+
+        if isDebugEnabled(HELPER, logEvents.POLL) then
+            debugLog(HELPER, logEvents.POLL, '{ Priority Queue }: ' .. tostring(self) .. ' , Polled data is: ' .. tostring(result));
+        end
         
         return result;
     end
@@ -133,6 +153,10 @@ function PriorityQueue:poll()
     if treeNode.parent ~= nil and treeNode.right == nil then
         treeNode.parent.left = nil;
         treeNode:clearNode();
+
+        if isDebugEnabled(HELPER, logEvents.POLL) then
+            debugLog(HELPER, logEvents.POLL, '{ Priority Queue }: ' .. tostring(self) .. ' , Polled data is: ' .. tostring(result));
+        end
 
         return result;
     end
@@ -143,13 +167,26 @@ function PriorityQueue:poll()
         self.root.parent = nil;
         treeNode:clearNode();
 
+        if isDebugEnabled(HELPER, logEvents.POLL) then
+            debugLog(HELPER, logEvents.POLL, '{ Priority Queue }: ' .. tostring(self) .. ' , Polled data is: ' .. tostring(result));
+        end
+
         return result;
+    end
+
+    if isDebugEnabled(HELPER, logEvents.POLL) then
+        debugLog(HELPER, logEvents.POLL, '{ Priority Queue }: ' .. tostring(self) .. ' , Polled data is: ' .. tostring(result));
     end
 
     return result;
 end
 
 function PriorityQueue:add(obj)
+    -- no error/exception in this case
+    if isDebugEnabled(HELPER, logEvents.ADD) then
+        debugLog(HELPER, logEvents.ADD, '{ Priority Queue }: ' .. tostring(self) .. ' , adding data: ' .. tostring(obj));
+    end
+
     if self.size == 0 or self.root == nil then
         self.root = TreeNode:new(obj, nil, nil, nil);
         self.size = 1;
@@ -160,6 +197,10 @@ function PriorityQueue:add(obj)
     self.root:add(obj, self.compareFunc);
 
     if self.size > self.capacity then
+        if isDebugEnabled(HELPER, logEvents.ADD) then
+            debugLog(HELPER, logEvents.ADD, '{ Priority Queue }: ' .. tostring(self) .. ' , Size is larger than Capacity, polling from PQ.');
+        end
+        
         self:poll();
     end
 end

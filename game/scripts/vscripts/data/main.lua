@@ -24,6 +24,7 @@ function Data:_initialize()
     Data._dataTable = {};   -- processed data table (compared with raw data)
 
     Data:_initCreepData();
+    Data:_initEventData();
 end
 
 --- Get key-values table based on the tableName and node PATHs.
@@ -50,7 +51,7 @@ function Data:getDataTable(tableName, ...)
     return table;
 end
 
---- Get handled data table based on the entry name
+--- Get handled (not raw) data table based on the entry name
 ---@param entry string
 ---@return table or nil
 function Data:getData(entry)
@@ -78,5 +79,23 @@ function Data:_initCreepData()
     if isDebugEnabled(CREEP, LOAD_DATA) then
         debugLog(CREEP, LOAD_DATA, 'Creep Data Map is loaded: ');
         Utility:printObj(data, 'CREEPDATA');
+    end
+end
+
+function Data:_initEventData()
+    local rawData = Data:getDataTable('GAME').EVENT;
+    local data = {};
+
+    for eventName, table in pairs(rawData) do
+        data[eventName] = {};
+
+        data[eventName].name = table.name;
+    end
+
+    Data._dataTable['EVENTDATA'] = data;
+
+    if isDebugEnabled(CREEP, LOAD_DATA) then
+        debugLog(CREEP, LOAD_DATA, 'Event Data Map is loaded: ');
+        Utility:printObj(data, 'EVENTDATA');
     end
 end

@@ -15,12 +15,49 @@
 
     "EVENT"
     {
-        "ENUM"
+        "onAttack"
         {
-            "ON_ATTACK"             ""
-            "ON_ATTACKED"           ""
-            "ON_DAMAGE"             ""
-            "ON_DAMAGED"            ""
+            "name"              "onAttack"
         }
+
+        "onEvade"
+        {
+            "name"              "onEvade"
+        }
+
+        "onBlock"
+        {
+            "name"              "onBlock"
+        }
+
+        "onCriticalStrike"
+        {
+            "name"              "onCriticalStrike"
+        }
+
+        "beAttacked"
+        {
+            "name"              "beAttacked"
+        }
+
+        "onDamge"
+        {
+            "name"              "onDamge"
+        }
+
+        "beDamaged"
+        {
+            "name"              "beDamaged"
+        }
+
+        "onCast"
+        {
+            "name"              "onCast"
+        }
+    }
+
+    "EFFECT"
+    {
+
     }
 }

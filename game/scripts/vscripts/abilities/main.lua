@@ -9,6 +9,12 @@ local SUCCESS = 'SUCCESS';
 local CHECK = 'CHECK';
 local EVENT = 'EVENT';
 
+Ability.Amplifier = {
+    RED = 'red',
+    GREEN = 'green',
+    BLUE = 'blue',
+};
+
 function Ability:_initialize()
     local dataTable = Data:getDataTable('ABILITY_DATA');
     local table = {};
@@ -127,4 +133,13 @@ function Ability:addAbilityToHero(abilityId, unit)
     if isDebugEnabled(ABILITY, EVENT) then
         debugLog(ABILITY, EVENT, 'Ability add to Creep: ' .. tostring(abilityData.id) .. ' -> ' .. Utility:formatUnitLog(unit));
     end
+end
+
+function Ability:hasAmplifier(unit, abilityId, amplifier)
+    if not (amplifier == Ability.Amplifier.RED or amplifier == Ability.Amplifier.GREEN or amplifier == Ability.Amplifier.BLUE) then
+        -- error condition
+        return false;
+    end
+
+    return true;
 end

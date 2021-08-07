@@ -60,6 +60,7 @@
 		"VisionNighttimeRange"	"2000"
 		"AttackDamageMin"	"64"
 		"AttackDamageMax"	"64"
+		"AttackRate"	"5"
 	}
 
 	"hero_ice_sorceress"

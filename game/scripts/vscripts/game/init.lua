@@ -61,7 +61,7 @@ function _initialize()
     ToAGame.debugLevel = GAME.DEBUG.LEV0;
 
     _G.getTestUnit = function ()
-        return Hero.IceSorceress._entity;
+        return Hero.TitanGuardian._entity;
     end
 end
 

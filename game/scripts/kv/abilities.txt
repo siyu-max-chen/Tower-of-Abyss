@@ -54,4 +54,10 @@
         "type"              "W"
     }
 
+    "ability_bloody_burst"
+    {
+        "text"              "鲜血爆裂"
+        "type"              "W"
+    }
+
 }

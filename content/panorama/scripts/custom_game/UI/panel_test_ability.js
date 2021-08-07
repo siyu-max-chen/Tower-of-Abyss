@@ -18,6 +18,7 @@ const abilityInfo = [
     { id: 'ability_spear_of_frozen_wind', type: ABILITY_Q, text: '寒风之枪', pos: 0 },
     { id: 'ability_stomp_of_pyro_wrath', type: ABILITY_W, text: '焦焰怒击', pos: 1 },
     { id: 'ability_blizzard', type: ABILITY_W, text: '暴风雪', pos: 1 },
+    { id: 'ability_bloody_burst', type: ABILITY_W, text: '鲜血爆裂', pos: 1 },
 ];
 
 const deltaX = 180, deltaY = 90;

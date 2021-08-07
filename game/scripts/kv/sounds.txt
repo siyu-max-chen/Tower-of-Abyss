@@ -10,6 +10,7 @@
     "Earth Shaker"      "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
     "Elder Titan"       "soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
     "Huskar"            "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+    "Life Stealer"      "soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
     "Jakiro"            "soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
     "Juggernaut"        "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
     "Leshrac"           "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"

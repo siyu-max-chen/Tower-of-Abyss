@@ -84,6 +84,18 @@
         "SOUND.HIT"     "Hero_AbyssalUnderlord.Firestorm.Cast"
     }
 
+    "BLOOD_CAST"
+    {
+        "PATH"          "particles/abilities/rupture_burst.vpcf"
+        "SOUND.HIT"     "Hero_AbyssalUnderlord.Firestorm.Cast"
+    }
+
+    "BLOOD_BURST.EFFECT"
+    {
+        "PATH"          "particles/basic_explosion/blood/blood_shake_refresh/blood_shake_refresh_ti9_call.vpcf"
+        "SOUND.HIT"     "Hero_Centaur.DoubleEdge"
+    }
+
     "FROST_CAST"
     {
         "PATH"          "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/cm_arcana_pup_flee.vpcf"
@@ -318,6 +330,38 @@
         
         "PATH"      "particles/items3_fx/blink_overwhelming_burst.vpcf"
         "SOUND.HIT" "Blink_Layer.Overwhelming"
+    }
+
+    "BLOOD_BURST"
+    {
+        "PATH"      "particles/basic_explosion/blood/blood_burst/blood_burst_overwhelming_burst.vpcf"
+        "SOUND.HIT" "Hero_LifeStealer.Assimilate.Destroy"
+    }
+
+    "BLOOD_BURST.SPLASH"
+    {
+        "PATH"      "particles/econ/items/lifestealer/ls_ti10_immortal/ls_ti10_immortal_infest_radial_burst_blood.vpcf"
+        "SOUND.HIT" "Blink_Layer.Overwhelming"
+    }
+
+    "BLOOD_BURST.GROUND"
+    {
+        "PATH"      "particles/econ/items/lifestealer/ls_ti10_immortal/ls_ti10_immortal_infest_groundfollow.vpcf"
+    }
+
+    "BLOOD_BURST.BUFF1"
+    {
+        "PATH"      "particles/basic_ambient/generic_buff/blood_burst/buff_blood_burst_ti9_open_wounds.vpcf"
+    }
+
+    "BLOOD_BURST.BUFF2"
+    {
+        "PATH"      "particles/econ/items/axe/axe_cinder/axe_cinder_battle_hunger.vpcf"
+    }
+
+    "BLOOD_BURST.BUFF3"
+    {
+        "PATH"      "particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_ground_eztzhok.vpcf"
     }
 
     "TITAN_GUARDIAN.AMBIENTS"

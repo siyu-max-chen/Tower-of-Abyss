@@ -111,6 +111,8 @@ Particle.controlPointTable['ICE_SORCERESS.ICE_FROST_WIND'] = {
     { key = 0, type = 0 }, { key = 1, type = 2, size = 150 }
 };
 
+
+
 --- Determine whether particleName is a particle array
 ---@param particleName string
 ---@return boolean
@@ -362,6 +364,8 @@ function Particle:fireParticle(particleName, target, attachPoint, index, ...)
     if particleId ~= nil then
         Particle:destroyParticle(particleId, false);
     end
+
+    return particleId;
 end
 
 function Particle:fireParticleDelay(particleName, target, attachPoint, delay, index, ...)

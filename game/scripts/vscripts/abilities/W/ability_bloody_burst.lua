@@ -24,8 +24,7 @@ function doBloodBurst(dataObj)
     -- particles animation
     Particle:destroyParticle(particleId, false);
     Particle:fireParticleLocation('BLOOD_BURST.SPLASH', location, PATTACH_POINT_FOLLOW, 10, nil, {
-        key = 0,
-        value = location
+        key = 0, value = location
     });
     Particle:playSound('hero_bloodseeker.bloodRite.silence', caster, false);
 

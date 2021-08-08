@@ -144,9 +144,40 @@
         "SOUND.HIT"     "Hero_Sven.StormBoltImpact"
     }
 
+    "STORM_BASH"
+    {
+        "PATH"          "particles/basic_explosion/cleave/bash_blur/storm_fist_warcry_shield_bash_blur.vpcf"
+    }
+
+    "STORM_BOLT_LITE"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/basic_projectile/thunder/storm_bolt/storm_bolt_proj_lite.vpcf"
+        "SOUND.CAST"    "Hero_Sven.StormBolt"
+        "SOUND.HIT"     "Hero_Sven.StormBoltImpact"
+    }
+
+    "STORM_BOLT_HEAVY"
+    {
+        "MISSILE"       "true"
+        "PATH"          "particles/basic_projectile/thunder/storm_bolt/storm_bolt_proj_heavy.vpcf"
+        "SOUND.CAST"    "Hero_Sven.StormBolt"
+        "SOUND.HIT"     "Hero_Sven.StormBoltImpact"
+    }
+
+    "STORM_BOLT.EFFECT1"
+    {
+        "PATH"          "particles/basic_explosion/thunder/thunder_effects/thunder_effect1_spirit_ti8_overload_flash.vpcf"
+    }
+
     "STORM_BOLT_DUST"
     {
         "PATH"          "particles/units/heroes/hero_sven/sven_spell_storm_bolt_dust.vpcf"
+    }
+
+    "THUNDER_CLOUD"
+    {
+        "PATH"          "particles/units/heroes/hero_razor/razor_rain_storm.vpcf"
     }
 
     "THUNDER_STRIKE"
@@ -356,7 +387,7 @@
 
     "BLOOD_BURST.BUFF2"
     {
-        "PATH"      "particles/econ/items/axe/axe_cinder/axe_cinder_battle_hunger.vpcf"
+        "PATH"      "particles/units/heroes/hero_axe/axe_battle_hunger.vpcf"
     }
 
     "BLOOD_BURST.BUFF3"

@@ -51,8 +51,8 @@ function ToAGame:InitGameMode()
 	-- GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(ToAGame, 'DamageFilter'), self);
 
 	CreateUnitByName("npc_creep_test_enemy", Vector(0, 800, 0), true, nil, nil, 3);
-	-- CreateUnitByName("npc_creep_test_enemy", Vector(-200, 600, 0), true, nil, nil, 3);
-	-- CreateUnitByName("npc_creep_test_enemy", Vector(-200, 1000, 0), true, nil, nil, 3);
+	CreateUnitByName("npc_creep_test_enemy", Vector(-200, 600, 0), true, nil, nil, 3);
+	CreateUnitByName("npc_creep_test_enemy", Vector(-200, 1000, 0), true, nil, nil, 3);
 	-- CreateUnitByName("npc_creep_test_enemy", Vector(200, 600, 0), true, nil, nil, 3);
 	-- CreateUnitByName("npc_creep_test_enemy", Vector(200, 1000, 0), true, nil, nil, 3);
 

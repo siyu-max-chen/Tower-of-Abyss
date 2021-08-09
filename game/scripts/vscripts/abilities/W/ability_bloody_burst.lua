@@ -42,7 +42,7 @@ function doBloodBurst(dataObj)
         timerEvent(delay, dataObj, doBloodBurstTwice);
     end
 
-    -- Blue Amplifier: 增加出血积蓄值
+    -- Blue Amplifier: 增加出血积蓄值 (额外例子特效)
     if Ability:hasAmplifier(caster, ABILITY_ID, Ability.Amplifier.BLUE) then
         Particle:fireParticleLocation('BLOOD_BURST.GROUND', location, PATTACH_POINT_FOLLOW, 10, nil, {
             key = 0,

@@ -434,7 +434,7 @@ function Particle:stopSound(soundName, target)
     if not soundName or not target then
         return;
     end
-    
+
     if not target._sounds or not target._sounds[soundName] or not target._sounds[soundName].stack then
         target:StopSound(soundName);
         return;

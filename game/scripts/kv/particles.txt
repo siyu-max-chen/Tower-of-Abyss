@@ -170,6 +170,11 @@
         "PATH"          "particles/basic_explosion/thunder/thunder_effects/thunder_effect1_spirit_ti8_overload_flash.vpcf"
     }
 
+    "STORM_BOLT.EFFECT1.GOLD"
+    {
+        "PATH"          "particles/basic_explosion/thunder/thunder_effects/thunder_effect1_spirit_ti8_overload_flash_gold.vpcf"
+    }
+
     "STORM_BOLT_DUST"
     {
         "PATH"          "particles/units/heroes/hero_sven/sven_spell_storm_bolt_dust.vpcf"
@@ -188,7 +193,22 @@
 
     "CHAIN_LIGHTNING"
     {
-        "PATH"          "particles/basic_projectile/toa_lightning_immortal_arc.vpcf"
+        "PATH"          "particles/basic_projectile/toa_lightning_immortal_arc_head.vpcf"
+    }
+
+    "CHAIN_LIGHTNING.GOLD"
+    {
+        "PATH"          "particles/basic_projectile/thunder/lightning_chain/toa_lightning_immortal_arc_head_gold.vpcf"
+    }
+
+    "LIGHTNING_SPARKS"
+    {
+        "PATH"          "particles/basic_explosion/thunder/thunderspark/thunder_spark_antimage_manavoid.vpcf"
+    }
+
+    "LIGHTNING_SPARKS_MINOR"
+    {
+        "PATH"          "particles/basic_explosion/thunder/thunderspark/thunder_spark_strike_array_ti7_impact_sparks.vpcf"
     }
 
     "LIGHTNING_IMPACT"

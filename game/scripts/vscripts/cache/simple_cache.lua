@@ -19,7 +19,7 @@ function Cache:_initialize()
         Cache._cacheSysTime = 0;
     end
 
-    CreateModifierThinker(nil, ABILITY_EFFECT_DUMMY, 'modifier_simple_cache', {}, Vector(0, 0, 0), 0, false);
+    CreateModifierThinker(DUMMY_UNIT, nil, 'modifier_simple_cache', {}, Vector(0, 0, 0), 0, false);
 end
 
 function Cache:_getCurrentTime()
@@ -155,6 +155,10 @@ function Cache:get(entry, cacheId)
     return data and data.obj or nil;
 end
 
+function Cache:hasInstance(entry, cacheId)
+    return entry and cacheId and Cache._cache[entry] and Cache._cache[entry].keyMap[cacheId];
+end
+
 --- Remove cached obj from cache, return the cached object
 ---@param entry string
 ---@param cacheId string
@@ -163,8 +167,8 @@ function Cache:remove(entry, cacheId)
     if not IsServer() then
         return;
     end
-    
-    if not entry or not cacheId or not Cache._cache[entry] or not Cache._cache[entry].keyMap[cacheId] then
+
+    if not Cache:hasInstance(entry, cacheId) then
         if isDebugEnabled(CACHE, REMOVE) then
             debugLog(CACHE, REMOVE, ('Remove cache NOT EXISTED: ' .. ' cache id: ' .. tostring(cacheId)));
         end

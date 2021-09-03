@@ -50,13 +50,15 @@ function ToAGame:InitGameMode()
 	GameRules:GetGameModeEntity():SetAbilityTuningValueFilter(Dynamic_Wrap(ToAGame, "AbilityFilter"), self);
 	-- GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(ToAGame, 'DamageFilter'), self);
 
-	CreateUnitByName("npc_creep_test_enemy", Vector(0, 800, 0), true, nil, nil, 3);
+	_G.DUMMY_UNIT = CreateUnitByName("npc_creep_test_enemy", Vector(0, 800, 0), true, nil, nil, 3);
 	CreateUnitByName("npc_creep_test_enemy", Vector(-200, 600, 0), true, nil, nil, 3);
 	CreateUnitByName("npc_creep_test_enemy", Vector(-200, 1000, 0), true, nil, nil, 3);
 	-- CreateUnitByName("npc_creep_test_enemy", Vector(200, 600, 0), true, nil, nil, 3);
 	-- CreateUnitByName("npc_creep_test_enemy", Vector(200, 1000, 0), true, nil, nil, 3);
 
 	ListenToGameEvent('npc_spawned', Dynamic_Wrap(ToAGame, 'OnNPCSpawned'), self);
+
+	Cache:_initialize();
 end
 
 -- Evaluate the state of the game

@@ -95,10 +95,9 @@ function ability_bloody_burst:OnSpellStart()
         delay = 0;
         caster:AttackNoEarlierThan(0);
 
-        Particle:fireParticleLocation('BLOOD_BURST.EFFECT', location, PATTACH_POINT_FOLLOW, 5, nil, {
-            key = 0,
-            value = location
-        });
+        Particle:fireParticleLocation('BLOOD_BURST.EFFECT', location, PATTACH_POINT_FOLLOW, 5, nil,
+            { key = 0, value = location }
+        );
     end
 
     local particleId = Particle:createParticle('BLOOD_BURST.BUFF1', caster);

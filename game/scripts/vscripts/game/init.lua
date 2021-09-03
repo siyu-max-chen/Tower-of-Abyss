@@ -5,6 +5,7 @@ require('data/main');
 require('utils/main');
 
 require('cache/simple_cache');
+require('abilities/dummy_ability');
 
 require('battle/main');
 require('boosters/main');
@@ -39,7 +40,7 @@ function _initialize()
     _G.Data = Data;                     Data:_initialize();
     _G.Utility = Utility;               Utility:_initialize();
 
-    _G.Cache = Cache;                   Cache:_initialize();
+    _G.Cache = Cache;
 
     _G.Battle = Battle;                 Battle:_initialize();
     _G.Booster = Booster;               Booster:_initialize();

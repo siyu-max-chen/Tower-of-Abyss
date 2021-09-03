@@ -233,7 +233,7 @@ end
 
 function Particle:createMissileLocation(particleName, missileInfo)
     local delay = 10;
-    local dummy = CreateModifierThinker(nil, self, 'modifier_particle_helper_dummy', { duration = delay }, missileInfo.location, 0, false);
+    local dummy = CreateModifierThinker(DUMMY_UNIT, nil, 'modifier_particle_helper_dummy', { duration = delay }, missileInfo.location, 0, false);
 
     local info = {
         EffectName =  Particle:getParticlePath(particleName),
@@ -384,7 +384,7 @@ function Particle:fireParticleDelay(particleName, target, attachPoint, delay, in
         return nil;
     end
 
-    local dummy = CreateModifierThinker(nil, self, 'modifier_particle_helper_dummy', { duration = delay, particleId = particleId }, Vector(0, 0, 0), target:GetTeamNumber(), false);
+    local dummy = CreateModifierThinker(DUMMY_UNIT, nil, 'modifier_particle_helper_dummy', { duration = delay, particleId = particleId }, Vector(0, 0, 0), target:GetTeamNumber(), false);
 
     return particleId;
 end
@@ -392,7 +392,7 @@ end
 function Particle:fireParticleLocation(particleName, location, attachPoint, delay, index, ...)
     local duration = math.min(10, (delay or 0)) + 5;
 
-    local dummy = CreateModifierThinker(nil, self, 'modifier_particle_helper_dummy', { duration = duration }, location, 0, false);
+    local dummy = CreateModifierThinker(DUMMY_UNIT, nil, 'modifier_particle_helper_dummy', { duration = duration }, location, 0, false);
     local particleId = Particle:fireParticleDelay(particleName, dummy, attachPoint, delay, index, ...);
 
     return particleId;
